@@ -1,0 +1,89 @@
+<!-- 
+ETAPE 1 :
+installation git: url https://brew.sh/ puis brew install git dans le terminal
+dans le terminal : 
+        mkdir: creer un dossier 
+        Cd : aller au dossier voulu
+
+        git config--global user.name"nom"
+        git config--global user.email emailsouhaité
+
+        configuration de l'environnement au niveau des couleurs: 
+
+        git config --global color.diff auto
+        git config --global color.status auto
+        git config --global color.branch auto
+
+    configuration de l'editeur:
+
+        git config --global core.editor vim
+        git config --global merge.tool vimdiff
+
+    Initialisation du depot git dans le projet :
+    
+        git config --global init.defaultBranch <nom>
+    
+    creation d'une nouvel brnche :
+            git branch -m nom
+
+    check les parametres : 
+            git config --list
+            
+    WORKING DIRECTORY : dossier ou l'on stock sur git 
+    stage : zone intermediaire entre le working directory et le repository
+    push : permet d'envoyer sur le cloud github
+    git status : permet de voir les fichiers present dans le dossier
+    
+    creer un fichier : 
+
+            touch fichier.extension : touch index.html
+
+    indexer le fichier (stage) :
+            git add index.html
+            si des modifications sont réalisé refaire le add
+
+    commit (enregistrer les modifications):
+            git commit -m "descrption"
+            
+    push sur github :
+    
+            copier le lien sur git hub du repository
+            git remote add origin lien 
+            ou installer lapp git hub si probleme cela le regle 
+            git branch -m main 
+            git push -u origin main
+
+        untracked : depot local pas encore pris en compte les chamgements
+        staged : prepare a partager le changement
+        commit : enregistre et envoie le changement 
+    
+    savoir notre branch connecté : git branch 
+    
+ ETAPE 2 ;
+ crrer une branche externe : 
+            git branch nom 
+basculer sur la nouvelle branch:
+            git checkout nomDeLaBranch
+
+creons un fichier sur cette branch :
+touch memo.txt
+
+NB: toujours travailler sur des branches externes de celle principal pour ne pas 
+detruire le travail principal et compromettre le service de celle ci 
+cela protege la version qui fonctionne.
+
+Fusion des branch apres que les modifications sois faites : 
+    1    basculer sur la branche ou lon veux rassembler :
+            git checkout branchprincipal ici main 
+    2   fusion :
+            git merge branchSecondaire que lon veux exporter sur la main
+
+    cela va basculer les fichiers modifiers de la branch secondaire
+    sur la principal.
+
+    
+
+    cela permet de parametrer les prochains projet de facon global 
+
+    
+-->
